@@ -1,16 +1,16 @@
-import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import Button from "../components/Button";
+import React from 'react';
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import Button from '../components/Button';
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
       blurRadius={10}
       style={styles.background}
-      source={require("../assets/background.jpg")}
+      source={require('../assets/background.jpg')}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+        <Image style={styles.logo} source={require('../assets/logo-red.png')} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
@@ -24,27 +24,27 @@ function WelcomeScreen(props) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    justifyContent: "flex-end",
-    alignItems: "center",
+    justifyContent: 'flex-end',
+    alignItems: 'center'
   },
   buttonsContainer: {
     padding: 20,
-    width: "100%",
+    width: '100%'
   },
   logo: {
     width: 100,
-    height: 100,
+    height: 100
   },
   logoContainer: {
-    position: "absolute",
+    position: 'absolute',
     top: 70,
-    alignItems: "center",
+    alignItems: 'center'
   },
   tagline: {
     fontSize: 25,
-    fontWeight: "600",
-    paddingVertical: 20,
-  },
+    fontWeight: '600',
+    paddingVertical: 20
+  }
 });
 
 export default WelcomeScreen;

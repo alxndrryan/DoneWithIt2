@@ -1,6 +1,8 @@
-import ListingEditScreen from "./app/screens/ListingEditScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ListingEditScreen from './app/screens/ListingEditScreen';
+import LoginScreen from './app/screens/LoginScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
-  return <ListingEditScreen />;
+  return <LoginScreen />;
 }
