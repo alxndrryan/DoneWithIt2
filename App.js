@@ -7,6 +7,7 @@ import ListingEditScreen from './app/screens/ListingEditScreen';
 import LoginScreen from './app/screens/LoginScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
+import ImageInput from './app/components/ImageInput';
 
 import Screen from './app/components/Screen';
 import { useEffect, useState } from 'react';
@@ -36,6 +37,7 @@ export default function App() {
     <Screen>
       <Button title="Select Image" onPress={selectImage} />
       <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }} />
+      <ImageInput imageUri={imageUri} />
     </Screen>
   );
 }
