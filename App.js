@@ -5,6 +5,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Screen from './app/components/Screen';
+import AuthNavigator from './app/navigation/AuthNavigator';
 
 const Link = () => {
   const navigation = useNavigation();
@@ -64,7 +65,7 @@ const Account = () => (
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Feed" component={Tweets} />
+    <Tab.Screen name="Feed" component={StackNavigator} />
     <Tab.Screen name="Account" component={Account} />
   </Tab.Navigator>
 );
@@ -72,7 +73,7 @@ const TabNavigator = () => (
 export default function App() {
   return (
     <NavigationContainer>
-      <TabNavigator />
+      <AuthNavigator />
     </NavigationContainer>
   );
 }
