@@ -1,36 +1,37 @@
-import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import React from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
 
-import Icon from "../components/Icon";
-import { ListItem, ListItemSeperator } from "../components/lists";
-import Screen from "../components/Screen";
-import colors from "../config/colors";
+import Icon from '../components/Icon';
+import { ListItem, ListItemSeperator } from '../components/lists';
+import Screen from '../components/Screen';
+import colors from '../config/colors';
 
 const menuItems = [
   {
-    title: "My Listings",
+    title: 'My Listings',
     icon: {
-      name: "format-list-bulleted",
-      backgroundColor: colors.primary,
-    },
+      name: 'format-list-bulleted',
+      backgroundColor: colors.primary
+    }
   },
   {
-    title: "My Messages",
+    title: 'My Messages',
     icon: {
-      name: "email",
-      backgroundColor: colors.secondary,
+      name: 'email',
+      backgroundColor: colors.secondary
     },
-  },
+    targetScreen: 'Messages'
+  }
 ];
 
-function AccountScreen(props) {
+function AccountScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
           title="Alexander Hogle"
           subTitle="alexanderhogle@gmail.com"
-          image={require("../assets/me.jpeg")}
+          image={require('../assets/me.jpeg')}
         />
       </View>
       <View style={styles.container}>
@@ -47,6 +48,7 @@ function AccountScreen(props) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
@@ -61,11 +63,11 @@ function AccountScreen(props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 20,
+    marginVertical: 20
   },
   screen: {
-    backgroundColor: colors.light,
-  },
+    backgroundColor: colors.light
+  }
 });
 
 export default AccountScreen;
