@@ -5,6 +5,7 @@ import Icon from '../components/Icon';
 import { ListItem, ListItemSeperator } from '../components/lists';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
+import routes from '../navigation/routes';
 
 const menuItems = [
   {
@@ -20,7 +21,7 @@ const menuItems = [
       name: 'email',
       backgroundColor: colors.secondary
     },
-    targetScreen: 'Messages'
+    targetScreen: routes.MESSAGES
   }
 ];
 
